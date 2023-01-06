@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+
+    <style>
+        section#calculator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+        form {
+    width: 265px;
+    height: 350px;
+    background: #3d8fc3;
+    text-align: center;
+    padding: 10p;
+    box-shadow: 0px 1px 4px 2px;
+}
+
+input[type="text"] {
+    font-family: arial;
+    width: 213px;
+    font-size: 25px;
+    height: 42px;
+    color: #1d1c56;
+    margin-top: 31px;
+    text-align: right;
+    border:none;
+}
+
+input[type="button"] {
+    width: 52px;
+    height: 42px;
+    margin-bottom: 7px;
+    color: #fff;
+    font-size: 20px;
+    background: rebeccapurple;
+    box-shadow: -3px 0px 19px -14px;
+}
+    </style>
+</head>
+<body>
+    <section id="calculator">
+        <form action="" name="calculator">
+            <input type="text" name="screen" disabled>
+            <hr>
+            <input type="button" value="&radic;" onclick="calculator.screen.value=Math.sqrt(calculator.screen.value )">
+            <input type="button" value="CE" onclick="calculator.screen.value=''">
+            <input type="button" value="AC" onclick="calculator.screen.value=''">
+            <input type="button" value="&larr;" onclick="calculator.screen.value=calculator.screen.value.slice(0,-1)"><br>
+            <input type="button" value="7" onclick="calculator.screen.value +='7'">       
+            <input type="button" value="8" onclick="calculator.screen.value +='8'">       
+            <input type="button" value="9" onclick="calculator.screen.value +='9'">       
+            <input type="button" value="+" onclick="calculator.screen.value +='+'"><br>      
+            <input type="button" value="4" onclick="calculator.screen.value +='4'">       
+            <input type="button" value="5" onclick="calculator.screen.value +='5'">       
+            <input type="button" value="6" onclick="calculator.screen.value +='6'">       
+            <input type="button" value="-" onclick="calculator.screen.value +='-'"> <br>
+            <input type="button" value="1" onclick="calculator.screen.value +='1'">       
+            <input type="button" value="2" onclick="calculator.screen.value +='2'">       
+            <input type="button" value="3" onclick="calculator.screen.value +='3'">       
+            <input type="button" value="*" onclick="calculator.screen.value +='*'"> <br>
+            <input type="button" value="0" onclick="calculator.screen.value +='0'">       
+            <input type="button" value="." onclick="calculator.screen.value +='.'">       
+            <input type="button" value="=" onclick="calculator.screen.value = eval(calculator.screen.value)">       
+            <input type="button" value="/" onclick="calculator.screen.value +='/'">    
+    
+        </form>
+    </section>
+    
+    
+</body>
+</html>
